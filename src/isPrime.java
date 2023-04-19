@@ -7,13 +7,32 @@ public class isPrime {
         int num = keys.nextInt();
         //System.out.println(isPrime(num));
         if (num == 1)
-            System.out.println(num + " is a prime number ");
-        for (int i = 2; i < num/2; i++) {
-            if ( num % i == 0)
-                System.out.println(num + " is not  a prime number");
+            System.out.println(num + " is a not prime number ");
+        boolean isPrime = false;
+        for (int i = 2; i < num; i++) {
+            if ( num % i == 0) {
+                isPrime = false;
+                break;
+            }
         }
-        System.out.println(num + " is a Prime number");
+        if ( !isPrime )
+            System.out.println(num + " is prime ");
+        else
+            System.out.println(num + " is not prime ");
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
     public static boolean isPrime(int n){
         if ( n == 1) return true;
         for (int i = 2; i < Math.sqrt(n) ; i++) {
