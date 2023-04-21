@@ -16,8 +16,8 @@ public class TwoDarraySumEvenOdd {
                 }
             }
         }
-        System.out.println("the sum of all even numbers is : " + sumEven);
-        System.out.println("the sum of all odd numbers is : " + sumOdd);
+        System.out.println("Sum of Even is " + sumEven);
+        System.out.println("Sum of Odd is " + sumOdd);
 
     }
 }
