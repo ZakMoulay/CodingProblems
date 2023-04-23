@@ -11,6 +11,7 @@ public class DuplicateElementInStringArray {
                 ansSet.add(stArray[i]);
         }
         System.out.println(ansSet);
+        printDuplicate(stArray);
     }
     public static void printDuplicate(String[] st){
         for (int i = 0; i < st.length; i++) {
@@ -19,7 +20,5 @@ public class DuplicateElementInStringArray {
                     System.out.println(st[i]+ " ");
             }
         }
-
-
     }
 }
