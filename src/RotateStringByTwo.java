@@ -6,6 +6,21 @@ public class RotateStringByTwo {
         System.out.println(rotateByTwo("amazon"));
         System.out.println(rotateByNTimes("amazon", 2));
     }
+    public static String rotateByN(String st,int n){
+        String ansSt = "";
+
+        for (int i = n; i < st.length() ; i++) {
+            ansSt += st.charAt(i);
+        }
+        for (int i = 0; i < n; i++) {
+            ansSt += st.charAt(i);
+
+        }
+        return ansSt;
+    }
+
+
+
     public static String rotateByTwo(String st){
         if ( st.isEmpty()) return "";
         char[] arr = st.toCharArray();
