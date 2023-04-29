@@ -7,29 +7,18 @@ public class Palindrome {
         return s1.equals(new StringBuilder(s1).reverse().toString());
     }
 
-    // aba aabaa abcdcba
-    //String st = "abcba";
-      //             0 4
-    // int left = 0;
-    //int right = st.length()-1
-    // boolean p =  true;
-    //  while ( l <= r ){
-    //      if ( s.charAt(left) != s.charAt(right)){
-    //      p = false;
-    //        break;
-    //        }
-    //       left++; left = left + 1
-    //       right--; right = right - 1
-     //}
-
-    public static boolean isThePalindrome(String s){
+    public static boolean isThePalindrome(String st) {
+        String s = st.toLowerCase();
         int l = 0, r = s.length() - 1;
-        while ( l <= r ){
-            if ( s.charAt(l) != s.charAt(r))
-                return false;
+        boolean isPalindrome = true;
+        while (l <= r) {
+            if (s.charAt(l) != s.charAt(r)) {
+                isPalindrome = false;
+                break;
+            }
             l++;
             r--;
         }
-        return true;
+        return isPalindrome;
     }
 }
