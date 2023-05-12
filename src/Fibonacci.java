@@ -5,44 +5,33 @@ public class Fibonacci {
         Scanner keys = new Scanner(System.in);
         System.out.println("Enter a positive number : ");
         int num = keys.nextInt();
-        printFibonacci(num);
 
-        System.out.println();
-        fibonacci(num);
+
+        System.out.println(fibonacci(num));
+
     }
-    public static void printFibonacci(int n){
-       int a = 0;
-       int b = 1;
-        for (int i = 0; i < n ; i++) {
-            System.out.print( a + " ");
-            int sum = a + b;
+
+    public static int fibonacci(int n) {
+        if (n < 2) return 1;
+        int i = 2;
+        int a = 0;
+        int b = 1;
+        int fib = 0;
+        while (i<= n) {
+            fib = b + a;
             a = b;
-            b = sum;
+            b = fib;
+            i++;
         }
-
-
-
-
+        return fib;
     }
 
-
-
-
-
-
-
-
-
-
-
-    public static void fibonacci(int n){
-        int firstNum = 0, secondNum = 1, thirdNum;
-        System.out.print(firstNum + " " + secondNum );
-        for (int i = 2; i < n; i++){
-            thirdNum = firstNum + secondNum;
-            System.out.print(" " + thirdNum);
-            firstNum = secondNum;
-            secondNum = thirdNum;
-        }
-    }
 }
+
+
+
+
+
+
+
+
