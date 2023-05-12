@@ -21,25 +21,19 @@ public class Isomorphic {
         String st2 = "xxy";
         System.out.println(isOmorphic(st1,st2));
     }
-    public static boolean isOmorphic(String s1, String s2) {
-        if (s1.length() != s2.length()) return false;
+    public static boolean isOmorphic(String st1, String st2) {
+        if (st1.length() != st2.length()) return false;
         Map<Character, Character> hMap = new HashMap<>();
-        Set<Character> mySet = new HashSet<>();
-        for (int i = 0; i < s1.length(); i++) {
-            char c1 = s1.charAt(i);
-            char c2 = s2.charAt(i);
-            if (hMap.containsKey(c1)) {
-                if (hMap.get(c1) != c2) {
+        for (int i = 0; i < st1.length(); i++) {
+            char c = st1.charAt(i);
+            char p = st2.charAt(i);
+            if (hMap.containsKey(c)) {
+                if (hMap.get(c) != p) {
                     return false;
-                } else {
-                    if (mySet.contains(c2)) {
-                        return false;
-                    }
                 }
-                hMap.put(c1, c2);
-                mySet.add(c2);
+            } else {
+                hMap.put(c, p);
             }
-
         }
         return true;
     }
