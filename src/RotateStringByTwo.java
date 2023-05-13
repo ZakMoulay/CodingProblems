@@ -19,8 +19,6 @@ public class RotateStringByTwo {
         return ansSt;
     }
 
-
-
     public static String rotateByTwo(String st){
         if ( st.isEmpty()) return "";
         char[] arr = st.toCharArray();
@@ -32,6 +30,7 @@ public class RotateStringByTwo {
         sb.append(st.charAt(1));
         return sb.toString();
     }
+
     public static String rotateByNTimes(String st,int n){
         if ( st.isEmpty()) return "";
         char[] arr = st.toCharArray();
@@ -44,8 +43,12 @@ public class RotateStringByTwo {
         }
         return sb.toString();
     }
-
-
+    public static String rotateByNTimesX(String st,int n) {
+        StringBuffer sb = new StringBuffer();
+        sb.append(st.substring(n));
+        sb.append(st.substring(0,n));
+        return sb.toString();
+    }
 
 
 
